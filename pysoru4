@@ -1,0 +1,19 @@
+a = int(input("Sayi giriniz:"))
+b = int(input("Sayi giriniz:"))
+c = int(input("Sayi giriniz:"))
+d = int(input("Sayi giriniz:"))
+e = int(input("Sayi giriniz:"))
+f = int(input("Sayi giriniz:"))
+g = int(input("Sayi giriniz:"))
+x = int(input("Sayi giriniz:"))
+y = int(input("Sayi giriniz:"))
+z = int(input("Sayi giriniz:"))
+
+dizi = [a,b,c,d,e,f,g,x,y,z]
+print(dizi)
+
+enBuyukTek = -1
+for i in range(len(dizi)):
+    if dizi[i]%2 == 1 and dizi[i] > enBuyukTek:
+        enBuyukTek = dizi[i]
+print(enBuyukTek)
