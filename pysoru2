@@ -1,0 +1,94 @@
+def uzantisayisidogrulama(uzantisayi):
+    if uzantisayi == 1 or uzantisayi == 2 or uzantisayi == 3:
+        return True
+    else:
+        exit()
+def mailetdogrulama(mail):
+    if '@' in mail and mail.islower() == True:
+        return True
+    else:
+        exit()
+def split(word):
+    return list(word)
+def userkont(kullaniciAdiHarfleri):
+    for i in kullaniciAdiHarfleri:
+        if (ord(i) != 45 and ord(i) != 95 and (ord(i) > 123 or ord(i) < 96) and (ord(i) > 58 or ord(i) < 47)):
+            exit()
+def websaglakont(websitesiHarfleri):
+    for i in websitesiHarfleri:
+        if (ord(i) > 123 or ord(i) < 96) and (ord(i) > 58 or ord(i) < 47):
+            exit()
+def siteuzkont(siteuzantisiHarfleri):
+    for i in siteuzantisiHarfleri:
+        if((ord(i) > 123 or ord(i) < 96) and (ord(i) > 58 or ord(i) < 47)):
+            exit()
+def ulkekodukont(ulkekoduHarfleri):
+    for i in ulkekoduHarfleri:
+        if ((ord(i) > 123 or ord(i) < 96) and (ord(i) > 58 or ord(i) < 47)):
+            exit()
+def uzanti1(uzanti):
+    if uzantisayi == 1:
+        mail1 = mail.split('@')
+        kullaniciAdi = mail1[0]
+        uzantii = mail1[1]
+        uzanti = uzantii.split('.')
+        if len(uzanti) != 1 :
+            False
+            exit()
+        kullaniciAdiHarfleri = split(kullaniciAdi)
+        userkont(kullaniciAdiHarfleri)
+        websitesiSaglayici = uzanti[0]
+        websitesiHarfleri = split(websitesiSaglayici)
+        websaglakont(websitesiHarfleri)
+        print(True)
+def uzanti2(uzanti):
+    if uzantisayi == 2:
+        mail1 = mail.split('@')
+        kullaniciAdi = mail1[0]
+        uzantii = mail1[1]
+        uzanti = uzantii.split('.')
+        if len(uzanti) != 2 and not '.' in mail:
+            False
+            exit()
+        kullaniciAdiHarfleri = split(kullaniciAdi)
+        userkont(kullaniciAdiHarfleri)
+        websitesiSaglayici = uzanti[0]
+        siteuzantisi = uzanti[1]
+        websitesiHarfleri = split(websitesiSaglayici)
+        websaglakont(websitesiHarfleri)
+        siteuzantisiHarfleri = split(siteuzantisi)
+        siteuzkont(siteuzantisiHarfleri)
+        print(True)
+def uzanti3(uzanti):
+    if uzantisayi == 3:
+        mail1 = mail.split('@')
+        kullaniciAdi = mail1[0]
+        uzantii = mail1[1]
+        uzanti = uzantii.split('.')
+        if len(uzanti) != 3 and not '.' in mail:
+            False
+            exit()
+        kullaniciAdiHarfleri = split(kullaniciAdi)
+        userkont(kullaniciAdiHarfleri)
+        websitesiSaglayici = uzanti[0]
+        siteuzantisi = uzanti[1]
+        ulkekodu = uzanti[2]
+        websitesiHarfleri = split(websitesiSaglayici)
+        websaglakont(websitesiHarfleri)
+        siteuzantisiHarfleri = split(siteuzantisi)
+        siteuzkont(siteuzantisiHarfleri)
+        ulkekoduHarfleri = split(ulkekodu)
+        ulkekodukont(ulkekoduHarfleri)
+        print(True)
+try:
+    uzantisayi = int(input("Uzantı sayısını giriniz. (1,2 ya da 3):"))
+    uzantisayisidogrulama(uzantisayi)
+    mail = []
+    mail = input("Mail adresinizi girin:")
+    mailetdogrulama(mail)
+    uzanti = []
+    uzanti1(uzanti)
+    uzanti2(uzanti)
+    uzanti3(uzanti)
+except:
+    print("Yanlış ya da Hatalı Giriş Yaptınız.")
