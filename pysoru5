@@ -1,0 +1,43 @@
+class devletuni:
+    def __init__(self, uniadi, unituru, uniil, sinavsist, derssist):
+        self.uniadi = uniadi
+        self.unituru = unituru
+        self.uniil = uniil
+        self.sinavsist = sinavsist
+        self.derssist = derssist
+
+uni1 = devletuni("Suleyman Demirel Universitesi","Devlet Universitesi","Isparta","Yuz yuze","Yuz yuze")
+
+print("Universite adi:", uni1.uniadi)
+print("Universite türü:", uni1.unituru)
+print("Universite ili:", uni1.uniil)
+print("Universite sinav sistemi:", uni1.sinavsist)
+print("Universite ders sistemi:", uni1.derssist)
+
+class ozelveacik:
+    def __init__(self, uniadi, unituru, uniil, sinavsist, derssist, ucret):
+        self.uniadi = uniadi
+        self.unituru = unituru
+        self.uniil = uniil
+        self.sinavsist = sinavsist
+        self.derssist = derssist
+        self.ucret = ucret
+
+uni2 = ozelveacik("Baskent Universitesi","Özel Universitesi","Ankara","Yuz yuze","Yuz yuze","52745,21")
+
+print("Universite adi:", uni2.uniadi)
+print("Universite türü:", uni2.unituru)
+print("Universite ili:", uni2.uniil)
+print("Universite sinav sistemi:", uni2.sinavsist)
+print("Universite ders sistemi:", uni2.derssist)
+print("Universite ücret:", uni2.ucret)
+
+
+uni3 = ozelveacik("Anadolu Üniversitesi","Açıköğretim","Eskişehir","Yüz yüze","Offline/Online Uzaktan","445,31")
+
+print("Universite adi:", uni3.uniadi)
+print("Universite türü:", uni3.unituru)
+print("Universite ili:", uni3.uniil)
+print("Universite sinav sistemi:", uni3.sinavsist)
+print("Universite ders sistemi:", uni3.derssist)
+print("Universite ücret:", uni3.ucret)
